@@ -1,8 +1,9 @@
 {
   "name": "hoist-peers-webpack-resolve-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "use hoisting dep's peerDependencies even though already existing in dep's node_modules",
   "main": "./dist/index.js",
+  "keywords": ["hoist peers", "peerDependencies", "hoist", "peers", "npm link", "monorepo", "symlinks"],
   "files": [
     "dist"
   ],
