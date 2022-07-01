@@ -1,21 +1,21 @@
 # Hoist-Peers-Webpack-Resolve-Plugin
 
-use hoisting dep's peerDependencies even though already existing in dep's node_modules
+加载 **子依赖** 中的 `peerDependencies` 时，使用 **顶层依赖(hoisting)**，不管 **子依赖** 中 `node_modules` 是否已经存在该项。
 
-English | [简体中文](./README-zh_CN.md)
+[English](./README.md) | 简体中文
 
-1. [Install](#Install)
-2. [Usage](#Usage)
+1. [安装](#Install)
+2. [使用方法](#Usage)
 
-## Install
+## 安装
 
 ```bash
 npm i hoist-peers-webpack-resolve-plugin --save-dev
 ```
 
-## Usage
+## 使用方法
 
-### using webpack.config.js
+### 使用 webpack.config.js
 
 ```js
 // webpack.config.js

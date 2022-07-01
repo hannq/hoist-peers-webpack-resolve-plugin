@@ -1,0 +1,35 @@
+{
+  "name": "hoist-peers-webpack-resolve-plugin",
+  "version": "1.0.0",
+  "description": "use hoisting dep's peerDependencies even though already existing in dep's node_modules",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --watch --incremental",
+    "build": "npm run clean && npm run build:dist",
+    "build:dist": "tsc",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannq/hoist-peers-webpack-resolve-plugin.git"
+  },
+  "author": "hannq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hannq/hoist-peers-webpack-resolve-plugin/issues"
+  },
+  "homepage": "https://github.com/hannq/hoist-peers-webpack-resolve-plugin#readme",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "webpack": ">= 4.x || >=5.x"
+  },
+  "dependencies": {
+    "@types/webpack": "^5.28.0"
+  }
+}
