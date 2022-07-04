@@ -93,20 +93,20 @@ module.exports = config.toConfig();
 #### options.symlinks
 
 + **类型**: `boolean`
-+ **必填**: 否（如果使用的是 `webpack@4.x` 版本）
++ **必填**: 是（如果使用的是 `webpack@4.x` 版本）
 + **描述**: `webpack` 的 [config.resolve.symlinks](https://v4.webpack.js.org/configuration/resolve/#resolvesymlinks) 同名配置。
 
 #### options.modules
 
 + **类型**: `string[]`
-+ **必填**: 否（如果使用的是 `webpack@4.x` 版本）
++ **必填**: 是（如果使用的是 `webpack@4.x` 版本）
 + **描述**: `webpack` 的 [config.resolve.modules](https://v4.webpack.js.org/configuration/resolve/#resolvemodules) 同名配置。
 + **提示**: 必须是绝对路径。
 
 #### options.roots
 
-+ **type**: `string[]`
-+ **required**: `true` (if in webpack v4)
-+ **desc**: `webpack` 的 [config.resolve.roots](https://v4.webpack.js.org/configuration/resolve/#resolveroots) 同名配置。
++ **类型**: `string[]`
++ **必填**: 是（如果使用的是 `webpack@4.x` 版本）
++ **描述**: `webpack` 的 [config.resolve.roots](https://v4.webpack.js.org/configuration/resolve/#resolveroots) 同名配置。
 + **提示**: 必须是绝对路径。
 
