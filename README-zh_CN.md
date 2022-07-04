@@ -52,7 +52,7 @@ const config = new Config();
 // ...
 config.resolve
   .plugin('HoistPeersWebpackResolvePlugin')
-    .use(HoistPeersWebpackResolvePlugin, [{ deps: ['@apaas/common'] }]);
+    .use(HoistPeersWebpackResolvePlugin, [{ deps: ['lodash'] }]);
 
 // ...
 
