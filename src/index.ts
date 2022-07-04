@@ -1,10 +1,18 @@
-import fs from "fs";
 import path from "path";
 import type { ResolvePluginInstance, Resolver } from "webpack";
 
 export interface Options {
   /** deps needs hoist peers */
   deps: string[];
+  /** webpack v4 polyfill options */
+  options?: {
+    /** whether webpack resolve.symlinks enable */
+    symlinks: boolean;
+    /** webpack resolve.modules inlcude paths. must be absolute path */
+    modules: string[];
+    /** webpack roots inlcude paths. must be absolute path */
+    roots: string[];
+  }
 }
 
 export class HoistPeersWebpackResolvePlugin implements ResolvePluginInstance {
@@ -13,7 +21,9 @@ export class HoistPeersWebpackResolvePlugin implements ResolvePluginInstance {
   constructor(private options: Options) {}
 
   apply(resolver: Resolver) {
-    const { options: { symlinks, modules, roots } } = resolver;
+    // webpack v4 polyfill options.
+    const resolveOptions = resolver.options || this.options.options;
+    const { symlinks, modules, roots } = resolveOptions;
     const { deps = [] } = this.options;
     const projectRoot = Array.from(roots)[0];
     const nodeModulesBasePath = modules.find(module => typeof module === 'string' && path.isAbsolute(module) && module.endsWith('node_modules')) as string | null;
